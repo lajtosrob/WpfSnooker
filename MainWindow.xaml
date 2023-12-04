@@ -1,0 +1,60 @@
+﻿<Window x:Class="Wpf_Console.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Console"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical">
+            <Button x:Name="btnF3" Content="3. feladat" Click="btnF3_Click"/>
+            <Rectangle Height="6" Margin="20 5" Fill="orange"/>
+            <Button x:Name="btnF4" Content="4. feladat" Click="btnF4_Click"/>
+            <Rectangle Height="6" Margin="20 5" Fill="orange"/>
+            <StackPanel>
+                <Label Content="Ország:"/>
+                <TextBox x:Name="txtOrszag" Background="LightGreen" Text="Kína"/>
+                <Label Content="Árfolyam:"/>
+                <TextBox x:Name="txtArfolyam" Background="LightGreen" Text="380"/>
+            </StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="Helyezés:" Grid.Row="0" Grid.Column="0"/>
+                <Label Content="Név:" Grid.Row="1" Grid.Column="0"/>
+                <Label Content="Ország:" Grid.Row="2" Grid.Column="0"/>
+                <Label Content="Nyeremény összege:" Grid.Row="3" Grid.Column="0"/>
+
+                <Label x:Name="lblHelyezes" Grid.Row="0" Grid.Column="1" Foreground="Red"/>
+                <Label x:Name="lblNev" Grid.Row="1" Grid.Column="1" Foreground="Red"/>
+                <Label x:Name="lblOrszag" Grid.Row="2" Grid.Column="1" Foreground="Red"/>
+                <Label x:Name="lblNyeremeny" Grid.Row="3" Grid.Column="1" Foreground="Red"/>
+            </Grid>
+            <Button x:Name="btnF5" Content="5. feladat" Click="btnF5_Click"/>
+            <Rectangle Height="6" Margin="20 5" Fill="orange"/>
+            <Button x:Name="btnF6" Content="6. feladat" Click="btnF6_Click"/>
+            <Rectangle Height="6" Margin="20 5" Fill="orange"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Versenyzők száma:"/>
+                <TextBox x:Name="txtFeladat7" Width="50" Height="30"/>
+            </StackPanel>
+
+            <Button x:Name="btnF7" Content="7. feladat" Click="btnF7_Click"/>
+            <ListBox x:Name="lbStatisztika" Background="LightBlue" Margin="5" MinHeight="60"/>
+        </StackPanel>
+        <DataGrid x:Name="dgTablazat" Grid.Column="1" Margin="5" Background="Cornsilk"/>
+    </Grid>
+</Window>
